@@ -7,7 +7,7 @@ function App() {
   const [todo, settodo] = useState([])
 
   const addTodo=(todo)=>{
-    settodo((prev)=> [...prev,{...todo}])
+    settodo((prev)=> [...prev,{id: Date.now(),...todo}])
   }
 
   const deleteTodo=(id)=>{
